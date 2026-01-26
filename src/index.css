@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --obsidian: #0A1410;
+  --brand-green: #085E2F;
+  --emerald-deep: #095f30;
+  --champagne: #D4AF37;
+  --soft-gold: #F1E5AC;
+  --ivory: #FDFCF8;
+}
+
+@layer base {
+  body {
+    @apply bg-ivory text-obsidian font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .luxury-glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(to right, #D4AF37, #F1E5AC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Utility aliases to match existing usage if necessary */
+  .bg-obsidian { background-color: theme('colors.obsidian'); }
+  .text-obsidian { color: theme('colors.obsidian'); }
+  
+  .bg-brandGreen { background-color: theme('colors.brandGreen'); }
+  .text-brandGreen { color: theme('colors.brandGreen'); }
+
+  .bg-champagne { background-color: theme('colors.champagne'); }
+  .text-champagne { color: theme('colors.champagne'); }
+
+  .bg-emeraldDeep { background-color: theme('colors.emeraldDeep'); }
+  .text-emeraldDeep { color: theme('colors.emeraldDeep'); }
+  .border-emeraldDeep { border-color: theme('colors.emeraldDeep'); }
+
+  .bg-ivory { background-color: theme('colors.ivory'); }
+  .text-ivory { color: theme('colors.ivory'); }
+  .fill-ivory { fill: theme('colors.ivory'); }
+
+  .border-gold { border-color: theme('colors.champagne'); }
+}
+
+.stagger-reveal {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transition: clip-path 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.stagger-reveal.active {
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
