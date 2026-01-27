@@ -138,13 +138,6 @@ Utility functions are organized by purpose:
 - **Accessibility**: Semantic HTML and ARIA labels
 - **SEO**: Proper meta tags and semantic structure
 
-## 🔧 Configuration
-
-### Environment Variables
-Create a `.env.local` file:
-```
-GEMINI_API_KEY=your_gemini_api_key
-```
 
 ### Vite Config
 Path alias configured for clean imports:

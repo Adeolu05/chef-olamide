@@ -1,60 +1,103 @@
 import React from 'react';
-import { Phone, Mail } from 'lucide-react';
 
 const Contact: React.FC = () => {
     return (
-        <section id="contact" className="py-32 bg-ivory">
+        <section id="contact" className="py-24 bg-white">
             <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
-                    <div className="lg:col-span-5">
-                        <h2 className="text-7xl font-serif italic mb-12">Concierge.</h2>
-                        <div className="space-y-12">
-                            <div className="flex items-center space-x-8">
-                                <div className="w-16 h-16 border border-obsidian/10 rounded-full flex items-center justify-center">
-                                    <Phone size={24} strokeWidth={1} />
-                                </div>
-                                <div>
-                                    <h5 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">
-                                        Private
-                                    </h5>
-                                    <p className="text-xl font-serif italic">+1 (555) OLAMIDE</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center space-x-8">
-                                <div className="w-16 h-16 border border-obsidian/10 rounded-full flex items-center justify-center">
-                                    <Mail size={24} strokeWidth={1} />
-                                </div>
-                                <div>
-                                    <h5 className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">
-                                        Inquiry
-                                    </h5>
-                                    <p className="text-xl font-serif italic">concierge@chefolamide.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="lg:col-span-7 bg-white p-12 md:p-24 shadow-2xl border border-obsidian/5">
-                        <form className="space-y-12">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                                <input
-                                    type="text"
-                                    className="w-full bg-transparent border-b border-obsidian/10 py-4 focus:outline-none focus:border-obsidian transition-colors text-sm"
-                                    placeholder="FULL NAME"
-                                />
-                                <input
-                                    type="email"
-                                    className="w-full bg-transparent border-b border-obsidian/10 py-4 focus:outline-none focus:border-obsidian transition-colors text-sm"
-                                    placeholder="EMAIL ADDRESS"
-                                />
-                            </div>
-                            <textarea
-                                className="w-full bg-transparent border-b border-obsidian/10 py-4 focus:outline-none focus:border-obsidian transition-colors text-sm h-32"
-                                placeholder="YOUR VISION FOR THE EVENT"
+                <div className="mb-12">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-obsidian mb-4">Contact</h2>
+                    <p className="text-slate-600 text-sm md:text-base">
+                        Use this form for bookings, job opportunities, or agency enquiries.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    {/* Left - Contact Form */}
+                    <div className="bg-slate-50 p-8 md:p-10 rounded-lg border border-slate-200">
+                        <h3 className="text-obsidian text-xl font-bold mb-3">Send a message</h3>
+                        <p className="text-slate-500 text-sm mb-8">
+                            Prototype form (not connected). When you publish the site, we can connect this to email.
+                        </p>
+
+                        <form className="space-y-6">
+                            <input
+                                type="text"
+                                className="w-full bg-white border border-slate-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-brandGreen transition-colors"
+                                placeholder="Your name"
                             />
-                            <button className="w-full bg-brandGreen text-white py-8 text-[11px] font-bold uppercase tracking-[0.4em] hover:bg-champagne transition-all shadow-2xl">
+                            <input
+                                type="email"
+                                className="w-full bg-white border border-slate-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-brandGreen transition-colors"
+                                placeholder="Email address"
+                            />
+                            <input
+                                type="text"
+                                className="w-full bg-white border border-slate-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-brandGreen transition-colors"
+                                placeholder="Subject"
+                            />
+                            <textarea
+                                className="w-full bg-white border border-slate-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-brandGreen transition-colors h-32 resize-none"
+                                placeholder="Your message"
+                            />
+                            <button
+                                type="submit"
+                                className="w-full bg-brandGreen text-white py-4 text-sm font-bold uppercase tracking-wider rounded hover:bg-brandGreen/90 transition-all"
+                            >
                                 Send Message
                             </button>
                         </form>
+                    </div>
+
+                    {/* Right - Contact Details */}
+                    <div className="space-y-8">
+                        <div>
+                            <h3 className="text-obsidian text-xl font-bold mb-6">Details</h3>
+
+                            <div className="space-y-6">
+                                {/* Location */}
+                                <div>
+                                    <div className="inline-block bg-brandGreen/10 text-brandGreen text-xs font-bold px-3 py-1.5 rounded-full mb-2">
+                                        Location
+                                    </div>
+                                    <p className="text-slate-600 text-sm">United Kingdom</p>
+                                </div>
+
+                                {/* Email */}
+                                <div>
+                                    <div className="inline-block bg-brandGreen/10 text-brandGreen text-xs font-bold px-3 py-1.5 rounded-full mb-2">
+                                        Email
+                                    </div>
+                                    <p className="text-slate-600 text-sm">olamideabraham1212@outlook.com</p>
+                                </div>
+
+                                {/* Phone */}
+                                <div>
+                                    <div className="inline-block bg-brandGreen/10 text-brandGreen text-xs font-bold px-3 py-1.5 rounded-full mb-2">
+                                        Phone
+                                    </div>
+                                    <p className="text-slate-600 text-sm">(+44) 7424 925754</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Quick Links */}
+                        <div>
+                            <h4 className="text-obsidian text-lg font-bold mb-4">Quick links</h4>
+                            <div className="flex gap-3">
+                                <a
+                                    href="#specialties"
+                                    className="px-6 py-3 bg-white border border-slate-200 text-obsidian text-sm font-medium rounded hover:bg-slate-50 transition-all"
+                                >
+                                    Specialties
+                                </a>
+                                <a
+                                    href="#experience"
+                                    className="px-6 py-3 bg-white border border-slate-200 text-obsidian text-sm font-medium rounded hover:bg-slate-50 transition-all"
+                                >
+                                    Experience
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
