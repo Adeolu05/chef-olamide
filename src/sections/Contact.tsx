@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
                     <div className="bg-slate-50 p-8 md:p-10 rounded-lg border border-slate-200">
                         <h3 className="text-obsidian text-xl font-bold mb-3">Send a message</h3>
                         <p className="text-slate-500 text-sm mb-8">
-                            Prototype form (not connected). When you publish the site, we can connect this to email.
+                            Reach out for bookings, events, or culinary collaborations.
                         </p>
 
                         <form className="space-y-6">
