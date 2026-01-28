@@ -79,7 +79,7 @@ const Gallery: React.FC<GalleryProps> = ({ onImageClick }) => {
                             viewport={{ once: true }}
                             className="text-6xl md:text-9xl font-serif text-obsidian"
                         >
-                            Artifacts.
+                            Portfolio.
                         </motion.h2>
                     </div>
                     <motion.div
