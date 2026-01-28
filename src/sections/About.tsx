@@ -64,7 +64,7 @@ const About: React.FC = () => {
                             className="absolute top-0 right-0 w-4/5 h-4/5 overflow-hidden rounded-lg shadow-2xl"
                         >
                             <img
-                                src="https://i.imgur.com/WRG0ReO.jpeg"
+                                src="https://asset.cloudinary.com/dbrpuapfr/6a9dcc930b0d985f830ced5f48f22a58"
                                 className="w-full h-full object-cover"
                                 alt="Chef Olamide at work"
                             />
@@ -76,7 +76,7 @@ const About: React.FC = () => {
                             className="absolute bottom-0 left-0 w-2/5 h-2/5 overflow-hidden rounded-lg border-8 border-white shadow-2xl bg-white"
                         >
                             <img
-                                src="https://i.imgur.com/4z1M2NY.jpeg"
+                                src="https://asset.cloudinary.com/dbrpuapfr/adb573c2332ca692d6202b0b1394760f"
                                 className="w-full h-full object-cover"
                                 alt="Chef Olamide Brand"
                             />
