@@ -52,7 +52,7 @@ const Experience: React.FC = () => {
             <div className="max-w-screen-2xl mx-auto px-6 md:px-12 relative z-10">
                 <h2 className="text-6xl md:text-8xl font-serif mb-4">Experience.</h2>
                 <p className="text-white/60 text-sm md:text-base mb-24 max-w-2xl">
-                    Short, employer-friendly highlights from your recent roles.
+                    Recent roles across UK hotel and pub kitchens.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-1 bg-white/5">

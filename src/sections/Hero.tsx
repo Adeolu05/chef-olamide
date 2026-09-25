@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 <div className="absolute inset-0 bg-obsidian">
                     {/* Hero Image */}
                     <img
-                        src="/images/hero/hero-2.jpg"
+                        src="/images/hero/hero-2.webp"
                         className="w-full h-full object-cover object-center md:object-[center_30%] brightness-[0.35]"
                         alt="Chef Olamide at work in professional kitchen"
                     />

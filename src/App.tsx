@@ -8,9 +8,8 @@ import Gallery from './sections/Gallery';
 import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
-import ChatBot from './components/ChatBot';
 import { TESTIMONIALS } from './constants';
-import { scrollToSection } from './utils/menuUtils';
+import { scrollToSection } from './utils/scroll';
 
 const App: React.FC = () => {
   // Testimonials state
@@ -45,9 +44,6 @@ const App: React.FC = () => {
       <Testimonials activeTestimonial={activeTestimonial} />
       <Contact />
       <Footer />
-
-      {/* Floating Components */}
-      <ChatBot />
     </div>
   );
 };
