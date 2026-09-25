@@ -5,6 +5,17 @@ const Experience: React.FC = () => {
     const experiences = [
         {
             role: 'Chef de Partie',
+            company: 'The Lanesborough, Knightsbridge',
+            period: 'Sep 2026 – Present',
+            badge: 'Luxury Hotel',
+            highlights: [
+                'Run a section in the main kitchen of an Oetker Collection hotel, reporting to the Executive Chef.',
+                'Prepare and present dishes to established recipes, with strict portion control and regular tasting to hold standards.',
+                'Uphold rigorous food safety, labelling and hygiene standards, and train junior team members on the job.'
+            ]
+        },
+        {
+            role: 'Chef de Partie',
             company: 'Kings Arms Pub, Cardington',
             period: 'Nov 2024 – Present',
             badge: 'Hot Section Lead',
@@ -44,7 +55,7 @@ const Experience: React.FC = () => {
                     Short, employer-friendly highlights from your recent roles.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-1 bg-white/5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-1 bg-white/5">
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={index}
