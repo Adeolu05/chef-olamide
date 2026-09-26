@@ -17,7 +17,7 @@ const Experience: React.FC = () => {
         {
             role: 'Chef de Partie',
             company: 'Kings Arms Pub, Cardington',
-            period: 'Nov 2024 – Present',
+            period: 'Nov 2024 – Sep 2026',
             badge: 'Hot Section Lead',
             highlights: [
                 'Lead chef for the hot kitchen section; deliver traditional British classics and seasonal menus.',
