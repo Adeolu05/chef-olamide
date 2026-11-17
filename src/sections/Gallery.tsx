@@ -3,8 +3,15 @@ import { motion } from 'framer-motion';
 import Lightbox, { LightboxImage } from '../components/Lightbox';
 
 
-// Gallery images - 23 images, served as WebP
+// Gallery images, newest first, served as WebP
 const GALLERY_IMAGES = [
+    { filename: 'dish-chocolate-tart.webp', alt: 'Chocolate tart with a quenelle of orange sorbet on crumble' },
+    { filename: 'dish-braised-meat.webp', alt: 'Braised meat with herb relish, purée and shaved vegetables' },
+    { filename: 'dish-burrata.webp', alt: 'Burrata with heritage tomatoes, pomegranate, spiced almonds, mint and grilled sourdough' },
+    { filename: 'dish-afternoon-tea.webp', alt: 'Afternoon tea stand with pastries and finger sandwiches' },
+    { filename: 'dish-hummus-crudites.webp', alt: 'Hummus topped with chickpeas and chilli oil, served with crudités' },
+    { filename: 'dish-hummus-herbs.webp', alt: 'Hummus garnished with herbs, red-veined sorrel and black sesame' },
+    { filename: 'dish-breakfast.webp', alt: 'Breakfast plate with avocado, hash brown, grilled tomato, spinach, sausage and baked beans' },
     { filename: 'gallery-one.webp', alt: 'Nigerian Culinary Art 1' },
     { filename: 'gallery-two.webp', alt: 'Nigerian Culinary Art 2' },
     { filename: 'gallery-three.webp', alt: 'Nigerian Culinary Art 3' },
@@ -128,23 +135,29 @@ const Gallery: React.FC = () => {
                 </div>
 
                 <h3 className="text-brandGreen uppercase tracking-[0.4em] text-[10px] font-bold mb-6">On the plate</h3>
-                {/* Masonry Grid - Dynamic layout for 23 images */}
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+                {/* Masonry Grid - Dynamic layout for the dish photos */}
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 grid-flow-dense auto-rows-[170px] md:auto-rows-[200px] gap-4 md:gap-6">
                     {GALLERY_IMAGES.map((img, i) => {
                         // Create dynamic sizing patterns for visual interest
-                        let gridClass = 'aspect-square'; // Default
+                        // Tiles only claim grid cells; rows have a fixed height and
+                        // grid-flow-dense back-fills any holes, so the grid packs tightly.
+                        let gridClass = ''; // Default: one cell
 
+                        // Featured large images - specific positions
+                        if (i === 2 || i === 15) {
+                            gridClass = 'col-span-2 row-span-2';
+                        }
                         // Portrait images (taller) - every 5th and 11th
-                        if (i % 5 === 0 || i % 11 === 0) {
-                            gridClass = 'aspect-[3/4] md:row-span-2';
+                        else if (i % 5 === 0 || i % 11 === 0) {
+                            gridClass = 'row-span-2';
                         }
                         // Wide images - every 7th
                         else if (i % 7 === 0) {
-                            gridClass = 'aspect-[4/3] md:col-span-2';
+                            gridClass = 'md:col-span-2';
                         }
-                        // Featured large images - specific positions
-                        else if (i === 2 || i === 15) {
-                            gridClass = 'aspect-square md:col-span-2 md:row-span-2';
+                        // Last image spans two cells to close the final row
+                        if (i === GALLERY_IMAGES.length - 1) {
+                            gridClass = 'col-span-2 md:col-span-1 lg:col-span-2';
                         }
 
                         return (
