@@ -159,6 +159,7 @@ const Contact: React.FC = () => {
                                 </a>
                                 <a
                                     href="/Olamide-Oyewole-CV.pdf"
+                                    download="Olamide-Oyewole-CV.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-6 py-3 bg-brandGreen text-white text-sm font-medium rounded hover:bg-brandGreen/90 transition-all"

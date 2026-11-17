@@ -76,6 +76,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                             </a>
                             <a
                                 href="/Olamide-Oyewole-CV.pdf"
+                                download="Olamide-Oyewole-CV.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-8 py-4 border border-white/30 text-white text-xs font-bold uppercase tracking-wider hover:border-champagne hover:text-champagne transition-all"

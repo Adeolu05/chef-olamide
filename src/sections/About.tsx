@@ -86,24 +86,11 @@ const About: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Education & Certificates */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-                    <div className="p-8 rounded-lg border border-slate-100">
-                        <h3 className="text-brandGreen text-xs font-bold uppercase tracking-wider mb-6">Education</h3>
-                        <ul className="space-y-5">
-                            <li>
-                                <p className="text-obsidian font-bold">M.Sc., Information Technology</p>
-                                <p className="text-slate-500 text-sm">University of the West of England, Bristol · 2024</p>
-                            </li>
-                            <li>
-                                <p className="text-obsidian font-bold">B.Sc., Information Technology</p>
-                                <p className="text-slate-500 text-sm">University of Education, Winneba, Ghana · 2014</p>
-                            </li>
-                        </ul>
-                    </div>
+                {/* Certificates */}
+                <div className="mt-16">
                     <div className="p-8 rounded-lg border border-slate-100">
                         <h3 className="text-brandGreen text-xs font-bold uppercase tracking-wider mb-6">Certificates</h3>
-                        <ul className="space-y-3 text-sm text-slate-600">
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-slate-600">
                             {[
                                 'Level 2 Food Hygiene and Safety for Catering (High Speed Training)',
                                 'Food Safety Level 2 (CPL Learning)',
