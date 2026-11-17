@@ -29,6 +29,14 @@ const GALLERY_IMAGES = [
     { filename: 'gallery-twenty-three.webp', alt: 'Nigerian Culinary Art 23' },
 ];
 
+// Photos of the chef, shown above the food grid
+const CHEF_IMAGES = [
+    { filename: 'chef-kitchen.webp', alt: 'Chef Olamide smiling at the pass in a professional kitchen' },
+    { filename: 'chef-portrait-2.webp', alt: 'Chef Olamide in chef whites and apron' },
+    { filename: 'chef-mirror-2.webp', alt: 'Chef Olamide in chef whites and black apron' },
+    { filename: 'chef-mirror-1.webp', alt: 'Chef Olamide in uniform before service' },
+];
+
 interface GalleryProps {
     onImageClick: (index: number) => void;
 }
@@ -91,6 +99,29 @@ const Gallery: React.FC<GalleryProps> = ({ onImageClick }) => {
                     />
                 </div>
 
+                {/* Behind the pass - photos of the chef */}
+                <h3 className="text-brandGreen uppercase tracking-[0.4em] text-[10px] font-bold mb-6">Behind the pass</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 md:mb-24">
+                    {CHEF_IMAGES.map((img, i) => (
+                        <motion.div
+                            key={img.filename}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: i * 0.08 }}
+                            className="relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-obsidian"
+                        >
+                            <img
+                                src={`/images/chef/${img.filename}`}
+                                className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                                alt={img.alt}
+                                loading="lazy"
+                            />
+                        </motion.div>
+                    ))}
+                </div>
+
+                <h3 className="text-brandGreen uppercase tracking-[0.4em] text-[10px] font-bold mb-6">On the plate</h3>
                 {/* Masonry Grid - Dynamic layout for 23 images */}
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
                     {GALLERY_IMAGES.map((img, i) => {
