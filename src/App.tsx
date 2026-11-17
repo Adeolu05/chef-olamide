@@ -27,11 +27,6 @@ const App: React.FC = () => {
     scrollToSection(href);
   };
 
-  const handleGalleryImageClick = (index: number) => {
-    // Gallery lightbox functionality can be added here
-    console.log('Gallery image clicked:', index);
-  };
-
   return (
     <div className="relative bg-white selection:bg-champagne selection:text-white">
       <Navbar />
@@ -40,7 +35,7 @@ const App: React.FC = () => {
       <About />
       <Experience />
       <Specialties />
-      <Gallery onImageClick={handleGalleryImageClick} />
+      <Gallery />
       <Testimonials activeTestimonial={activeTestimonial} />
       <Contact />
       <Footer />

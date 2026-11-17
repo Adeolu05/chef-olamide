@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Lightbox, { LightboxImage } from '../components/Lightbox';
 
 
 // Gallery images - 23 images, served as WebP
@@ -37,11 +38,15 @@ const CHEF_IMAGES = [
     { filename: 'chef-mirror-1.webp', alt: 'Chef Olamide in uniform before service' },
 ];
 
-interface GalleryProps {
-    onImageClick: (index: number) => void;
-}
+// One list for the viewer: chef photos first, then the dishes
+const VIEWER_IMAGES: LightboxImage[] = [
+    ...CHEF_IMAGES.map((img) => ({ src: `/images/chef/${img.filename}`, alt: img.alt })),
+    ...GALLERY_IMAGES.map((img) => ({ src: `/images/gallery/${img.filename}`, alt: img.alt })),
+];
 
-const Gallery: React.FC<GalleryProps> = ({ onImageClick }) => {
+const Gallery: React.FC = () => {
+    const [viewerIndex, setViewerIndex] = useState<number | null>(null);
+
     return (
         <section id="gallery" className="relative py-32 bg-gradient-to-br from-ivory via-white to-soft-gold/10 overflow-hidden">
             {/* Decorative Wave SVG Divider */}
@@ -109,7 +114,8 @@ const Gallery: React.FC<GalleryProps> = ({ onImageClick }) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: i * 0.08 }}
-                            className="relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-obsidian"
+                            onClick={() => setViewerIndex(i)}
+                            className="relative overflow-hidden rounded-lg shadow-md aspect-[3/4] bg-obsidian cursor-pointer"
                         >
                             <img
                                 src={`/images/chef/${img.filename}`}
@@ -144,7 +150,7 @@ const Gallery: React.FC<GalleryProps> = ({ onImageClick }) => {
                         return (
                             <motion.div
                                 key={`gallery-${i}`}
-                                onClick={() => onImageClick(i)}
+                                onClick={() => setViewerIndex(CHEF_IMAGES.length + i)}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -163,6 +169,13 @@ const Gallery: React.FC<GalleryProps> = ({ onImageClick }) => {
                     })}
                 </div>
             </div>
+
+            <Lightbox
+                images={VIEWER_IMAGES}
+                index={viewerIndex}
+                onClose={() => setViewerIndex(null)}
+                onIndexChange={setViewerIndex}
+            />
         </section>
     );
 };
