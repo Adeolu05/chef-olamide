@@ -4,47 +4,57 @@ import { motion } from 'framer-motion';
 const Experience: React.FC = () => {
     const experiences = [
         {
-            role: 'Chef de Partie',
-            company: 'The Lanesborough, Knightsbridge',
+            role: 'Chef de Partie, Main Kitchen',
+            company: 'The Lanesborough (Oetker Collection), Knightsbridge',
             period: 'Sep 2026 – Present',
-            badge: 'Luxury Hotel',
+            badge: 'Five-Star Hotel',
             highlights: [
-                'Run a section in the main kitchen of an Oetker Collection hotel, reporting to the Executive Chef.',
-                'Prepare and present dishes to established recipes, with strict portion control and regular tasting to hold standards.',
-                'Uphold rigorous food safety, labelling and hygiene standards, and train junior team members on the job.'
+                'Run a section in the Main Kitchen of a five-star luxury hotel, cooking to established recipe cards and methods.',
+                'Review daily occupancy, reservations and function sheets to plan the right production levels.',
+                'Taste and check food, sauces and preparations throughout service to hold standards and portion control.',
+                'Adapt dishes for special guest requests and dietary needs, and train junior chefs on the job.'
             ]
         },
         {
             role: 'Chef de Partie',
-            company: 'Kings Arms Pub, Cardington',
+            company: 'Kings Arms Pub (Mitchells & Butlers), Cardington',
             period: 'Nov 2024 – Sep 2026',
             badge: 'Hot Section Lead',
             highlights: [
-                'Lead chef for the hot kitchen section; deliver traditional British classics and seasonal menus.',
-                'Maintain quality, stock management, and support training of junior chefs.',
-                'High-volume service experience (150+ covers per shift) with consistent standards.'
+                'Led the hot kitchen section, delivering British classics and seasonal menus at 150+ covers per shift.',
+                'Introduced stock rotation procedures that cut food waste by 20% and improved cost efficiency.',
+                'Developed seasonal menus with the Sous Chef and Head Chef, boosting repeat visits.',
+                'Trained and supervised junior chefs, and supported a continuous 5-star food hygiene rating.'
             ]
         },
         {
             role: 'Chef de Partie',
-            company: 'Millennium Hotel, Knightsbridge',
+            company: 'Millennium Hotel London, Knightsbridge',
             period: 'May 2024 – Jun 2024',
             badge: 'Hotel Kitchen',
             highlights: [
-                'Supported senior CDP / sous chefs; ensured mise en place was service-ready.',
-                'Maintained presentation and section standards according to recipe guidance.'
+                'Deputised for the Senior Chef de Partie, running the section in their absence.',
+                'Prepared, cooked and presented all section dishes to the recipe file, accommodating guest requests.',
+                'Coordinated Commis Chefs to complete mise en place before service.'
             ]
         },
         {
-            role: 'Chef de Partie',
-            company: 'King William IV, Bedford',
-            period: 'Oct 2023',
-            badge: 'Quality & Cleanliness',
+            role: 'Commis Chef',
+            company: 'The Falcon Pub, Rushden Road',
+            period: 'Mar 2024 – May 2024',
+            badge: 'Menu & Service',
             highlights: [
-                'Prepared, cooked, and presented food to company standards and guest expectations.',
-                'Focused on portion control, stock rotation, and high hygiene standards.'
+                'Supported food preparation and service, managing workflow during peak hours.',
+                'Contributed to new menu items and promotions, including dishes for dietary requirements.',
+                'Kept the kitchen clean, organised and compliant with health and safety regulations.'
             ]
         }
+    ];
+
+    const earlierRoles = [
+        { role: 'Chef de Partie', company: 'King William IV, Kempston', period: 'Oct 2023' },
+        { role: 'Chef', company: 'Côte Brasserie, Royal Festival Hall', period: 'Sep 2023' },
+        { role: 'Chef', company: 'TGI Fridays, Stratford', period: 'Jan 2023' }
     ];
 
     return (
@@ -52,7 +62,7 @@ const Experience: React.FC = () => {
             <div className="max-w-screen-2xl mx-auto px-6 md:px-12 relative z-10">
                 <h2 className="text-6xl md:text-8xl font-serif mb-4">Experience.</h2>
                 <p className="text-white/60 text-sm md:text-base mb-24 max-w-2xl">
-                    Recent roles across UK hotel and pub kitchens.
+                    Over three years in UK professional kitchens, from high-volume pubs to five-star hotels in Knightsbridge.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-1 bg-white/5">
@@ -100,6 +110,19 @@ const Experience: React.FC = () => {
                             </a>
                         </motion.div>
                     ))}
+                </div>
+
+                <div className="mt-16">
+                    <h3 className="text-champagne text-xs font-bold uppercase tracking-[0.3em] mb-6">Earlier roles</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-1 bg-white/5">
+                        {earlierRoles.map((r) => (
+                            <div key={r.company} className="p-8 border-r border-white/5 last:border-r-0">
+                                <p className="text-champagne text-sm font-medium mb-2">{r.period}</p>
+                                <h4 className="text-xl font-serif mb-1">{r.role}</h4>
+                                <p className="text-white/60 text-sm font-light">{r.company}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

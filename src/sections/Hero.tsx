@@ -51,13 +51,13 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                     >
                         <span className="inline-flex items-center gap-2 text-champagne uppercase tracking-[0.3em] text-[8px] md:text-[10px] font-bold mb-6 block">
                             <span className="w-2 h-2 rounded-full bg-brandGreen"></span>
-                            Modern & Classic Cuisine • UK
+                            Chef de Partie • London
                         </span>
                         <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
                             Precision, consistency, and great food, every service.
                         </h1>
                         <p className="text-white/70 text-sm sm:text-base md:text-lg font-light mb-8 max-w-2xl leading-relaxed">
-                            Professional Chef de Partie with experience in high-volume pub and hotel kitchens. Strong on organisation, hygiene standards, and teamwork.
+                            Chef de Partie with over three years in UK professional kitchens, from high-volume pubs to five-star luxury hotels in Knightsbridge. Calm under pressure, organised, and focused on consistent quality.
                         </p>
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                             <a
@@ -74,6 +74,14 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                             >
                                 See Experience
                             </a>
+                            <a
+                                href="/Olamide-Oyewole-CV.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-8 py-4 border border-white/30 text-white text-xs font-bold uppercase tracking-wider hover:border-champagne hover:text-champagne transition-all"
+                            >
+                                Download CV
+                            </a>
                         </div>
                     </motion.div>
 
@@ -88,28 +96,28 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                             <h3 className="text-brandGreen text-xs font-bold uppercase tracking-wider mb-4">Highlights</h3>
                             <h4 className="text-obsidian text-lg font-bold mb-3">Service-ready performance</h4>
                             <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-                                Hot section leadership, stock rotation, waste control, and high standards under pressure.
+                                Hot section leadership, menu development, cost control and high standards under pressure.
                             </p>
 
                             <div className="grid grid-cols-3 gap-3 mb-4">
                                 <div className="bg-slate-50 p-3 rounded">
                                     <div className="text-obsidian font-bold text-sm mb-1">150+ covers</div>
-                                    <div className="text-slate-500 text-xs">high-volume service</div>
+                                    <div className="text-slate-500 text-xs">per shift</div>
                                 </div>
                                 <div className="bg-slate-50 p-3 rounded">
-                                    <div className="text-obsidian font-bold text-sm mb-1">Food Safety</div>
-                                    <div className="text-slate-500 text-xs">HACCP-focused</div>
+                                    <div className="text-obsidian font-bold text-sm mb-1">20% less waste</div>
+                                    <div className="text-slate-500 text-xs">stock rotation</div>
                                 </div>
                                 <div className="bg-slate-50 p-3 rounded">
-                                    <div className="text-obsidian font-bold text-sm mb-1">Team Support</div>
-                                    <div className="text-slate-500 text-xs">training & mentoring</div>
+                                    <div className="text-obsidian font-bold text-sm mb-1">5★ hygiene</div>
+                                    <div className="text-slate-500 text-xs">HACCP & EHO</div>
                                 </div>
                             </div>
 
                             <div className="flex flex-wrap gap-2">
                                 <span className="px-3 py-1.5 bg-brandGreen/10 text-brandGreen text-xs font-medium rounded-full">British classics</span>
-                                <span className="px-3 py-1.5 bg-brandGreen/10 text-brandGreen text-xs font-medium rounded-full">Hotel service</span>
-                                <span className="px-3 py-1.5 bg-brandGreen/10 text-brandGreen text-xs font-medium rounded-full">Stock control</span>
+                                <span className="px-3 py-1.5 bg-brandGreen/10 text-brandGreen text-xs font-medium rounded-full">Five-star hotel</span>
+                                <span className="px-3 py-1.5 bg-brandGreen/10 text-brandGreen text-xs font-medium rounded-full">Menu development</span>
                             </div>
                         </div>
                     </motion.div>

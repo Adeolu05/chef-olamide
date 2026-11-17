@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
                                     <div className="inline-block bg-brandGreen/10 text-brandGreen text-xs font-bold px-3 py-1.5 rounded-full mb-2">
                                         Location
                                     </div>
-                                    <p className="text-slate-600 text-sm">United Kingdom</p>
+                                    <p className="text-slate-600 text-sm">Bedford &amp; London, United Kingdom</p>
                                 </div>
 
                                 {/* Email */}
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
                         {/* Quick Links */}
                         <div>
                             <h4 className="text-obsidian text-lg font-bold mb-4">Quick links</h4>
-                            <div className="flex gap-3">
+                            <div className="flex flex-wrap gap-3">
                                 <a
                                     href="#specialties"
                                     className="px-6 py-3 bg-white border border-slate-200 text-obsidian text-sm font-medium rounded hover:bg-slate-50 transition-all"
@@ -156,6 +156,14 @@ const Contact: React.FC = () => {
                                     className="px-6 py-3 bg-white border border-slate-200 text-obsidian text-sm font-medium rounded hover:bg-slate-50 transition-all"
                                 >
                                     Experience
+                                </a>
+                                <a
+                                    href="/Olamide-Oyewole-CV.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-6 py-3 bg-brandGreen text-white text-sm font-medium rounded hover:bg-brandGreen/90 transition-all"
+                                >
+                                    Download CV
                                 </a>
                             </div>
                         </div>

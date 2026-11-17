@@ -4,28 +4,28 @@ import { motion } from 'framer-motion';
 const Specialties: React.FC = () => {
     const specialties = [
         {
-            title: 'Traditional British',
-            description: 'Pub classics, seasonal menus, consistent plating.'
+            title: 'British Classics',
+            description: 'Traditional dishes and seasonal menus, plated consistently at volume.'
         },
         {
-            title: 'Modern European',
-            description: 'Clean flavours, strong prep, service efficiency.'
+            title: 'Classical & Modern Cookery',
+            description: 'Sauces, meat and vegetable preparation, to recipe cards and methods.'
         },
         {
-            title: 'Grill & Hot Section',
-            description: 'Protein prep, timing, temperature control.'
+            title: 'Hot Section Leadership',
+            description: 'Running the section and deputising for senior chefs at 150+ covers per shift.'
         },
         {
-            title: 'Stock & Rotation',
-            description: 'FIFO, inventory checks, reducing waste.'
+            title: 'Food Safety & Allergens',
+            description: 'HACCP, allergen management, COSHH and EHO standards.'
         },
         {
-            title: 'Hygiene & Safety',
-            description: 'High standards and safe kitchen practices.'
+            title: 'Cost Control',
+            description: 'Stock rotation, ordering, portion control and waste reduction.'
         },
         {
-            title: 'Training Support',
-            description: 'Helping commis/juniors build confidence and speed.'
+            title: 'Menu Development & Training',
+            description: 'Dishes for special requests and dietary needs, and mentoring commis chefs.'
         }
     ];
 

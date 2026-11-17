@@ -8,7 +8,7 @@ const About: React.FC = () => {
                 <div className="mb-16">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-obsidian mb-6">About</h2>
                     <p className="text-slate-600 text-base md:text-lg max-w-4xl leading-relaxed">
-                        I'm a Chef de Partie with experience across pubs, restaurants, and hotels in the UK—focused on quality, cleanliness, and consistent execution in fast-paced kitchens.
+                        I'm a Chef de Partie at The Lanesborough in Knightsbridge, with over three years in UK professional kitchens, from high-volume pubs to five-star luxury hotels. I run a hot section of 150+ covers per shift, train junior chefs, and keep standards high on quality, food safety and cost control. Next, I'm working towards Senior Chef de Partie and Junior Sous Chef.
                     </p>
                 </div>
 
@@ -24,7 +24,7 @@ const About: React.FC = () => {
                         >
                             <h3 className="text-obsidian text-xl font-bold mb-4">Kitchen Strength</h3>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                Hot section service, mise en place, timing, and section organisation.
+                                Running a hot section and deputising for senior chefs. Classical and modern cookery: British classics, seasonal menus, sauces, meat and vegetable preparation.
                             </p>
                         </motion.div>
 
@@ -37,7 +37,7 @@ const About: React.FC = () => {
                         >
                             <h3 className="text-obsidian text-xl font-bold mb-4">Standards</h3>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                Food hygiene, allergen awareness, and clean workstations.
+                                HACCP, allergen management, COSHH and EHO standards, plus cost control through stock rotation, ordering, portion control and waste reduction.
                             </p>
                         </motion.div>
 
@@ -50,7 +50,7 @@ const About: React.FC = () => {
                         >
                             <h3 className="text-obsidian text-xl font-bold mb-4">Teamwork</h3>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                Clear communication and support for junior chefs during peak service.
+                                Training and mentoring commis chefs during peak service, with clear communication across the brigade and front of house.
                             </p>
                         </motion.div>
                     </div>
@@ -64,9 +64,10 @@ const About: React.FC = () => {
                             className="absolute top-0 right-0 w-4/5 h-4/5 overflow-hidden rounded-lg shadow-2xl"
                         >
                             <img
-                                src="https://res.cloudinary.com/dbrpuapfr/image/upload/v1769552144/WRG0ReO_cxanx6.jpg"
+                                src="/images/about/chef-portrait.webp"
                                 className="w-full h-full object-cover"
-                                alt="Chef Olamide at work"
+                                alt="Chef Olamide in chef whites"
+                                loading="lazy"
                             />
                         </motion.div>
                         <motion.div
@@ -78,9 +79,44 @@ const About: React.FC = () => {
                             <img
                                 src="https://res.cloudinary.com/dbrpuapfr/image/upload/v1769552134/4z1M2NY_d_tz6ove.jpg"
                                 className="w-full h-full object-cover"
-                                alt="Chef Olamide Brand"
+                                alt="Chef Olamide logo"
+                                loading="lazy"
                             />
                         </motion.div>
+                    </div>
+                </div>
+
+                {/* Education & Certificates */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+                    <div className="p-8 rounded-lg border border-slate-100">
+                        <h3 className="text-brandGreen text-xs font-bold uppercase tracking-wider mb-6">Education</h3>
+                        <ul className="space-y-5">
+                            <li>
+                                <p className="text-obsidian font-bold">M.Sc., Information Technology</p>
+                                <p className="text-slate-500 text-sm">University of the West of England, Bristol · 2024</p>
+                            </li>
+                            <li>
+                                <p className="text-obsidian font-bold">B.Sc., Information Technology</p>
+                                <p className="text-slate-500 text-sm">University of Education, Winneba, Ghana · 2014</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="p-8 rounded-lg border border-slate-100">
+                        <h3 className="text-brandGreen text-xs font-bold uppercase tracking-wider mb-6">Certificates</h3>
+                        <ul className="space-y-3 text-sm text-slate-600">
+                            {[
+                                'Level 2 Food Hygiene and Safety for Catering (High Speed Training)',
+                                'Food Safety Level 2 (CPL Learning)',
+                                'Allergens (Florence Academy Training)',
+                                'Chemical Competence (CPL Learning)',
+                                'Health and Safety Level 2 (Flow Learning by Mapal)'
+                            ].map((c) => (
+                                <li key={c} className="flex items-start">
+                                    <span className="text-champagne mr-3">•</span>
+                                    <span>{c}</span>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>
